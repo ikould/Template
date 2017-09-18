@@ -4,3 +4,6 @@
 	1）config -> jdbc.properties 数据库信息修改
 	2）spring -> spring-mvc      @controller 扫描包名修改
 		  -> spring-mybatis  ① 自动扫描 ② DAO接口所在包名
+	3) mappering 所有包名
+4.pow.xml <artifactId>名称修改
+5.Tomcat 删除重新创建（网页访问名字可能还是Temlate）
