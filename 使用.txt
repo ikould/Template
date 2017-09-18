@@ -1,0 +1,6 @@
+1 .project文件中 name 修改为项目名字
+2 .settings org.eclipse.wst.common.component name 修改为项目名字
+3 项目中resource文件夹下：
+	1）config -> jdbc.properties 数据库信息修改
+	2）spring -> spring-mvc      @controller 扫描包名修改
+		  -> spring-mybatis  ① 自动扫描 ② DAO接口所在包名

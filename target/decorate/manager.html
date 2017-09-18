@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="Shortcut Icon" href="img/ic_icon.png">
+<title>后台管理</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/manager.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.min.js"></script>
+<script type="text/javascript" src="js/manager.js"></script>
+</head>
+
+<body>
+	<div id="slide">
+		<ul class="slide_type clearfix">
+		</ul>
+	</div>
+
+	<div id="main">
+		<!-- 类型编辑 -->
+		<div id="edit_type">
+			<p>类型编辑</p>
+			<div id="edit_type_name">
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="" id="edit_type_name_value" />
+			</div>
+			<div id="edit_type_desc">
+				<label>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述</label> <input
+					value="" id="edit_type_desc_value" />
+			</div>
+			<div>
+				<button id="edit_type_save">保存</button>
+				<button id="edit_type_delete">删除</button>
+			</div>
+		</div>
+
+		<!-- 类型添加 -->
+		<div id="add_type">
+			<p>类型添加</p>
+			<div class="add_type_name">
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="" id="add_type_name" />
+			</div>
+			<div class="add_type_desc">
+				<label>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述</label> <input
+					value="" id="add_type_msg" />
+			</div>
+			<div>
+				<button id="add_type_btn">添加</button>
+			</div>
+		</div>
+
+		<!-- 系列编辑 -->
+		<div id="edit_series">
+			<p>系列编辑</p>
+			<div id="edit_series_name">
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="" id="edit_series_name_value" />
+			</div>
+			<div id="edit_series_desc">
+				<label>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述</label> <input
+					value="" id="edit_series_desc_value" />
+			</div>
+			<button id="edit_series_save">保存</button>
+			<button id="edit_series_delete">删除</button>
+		</div>
+
+		<!-- 系列添加 -->
+		<div id="add_series">
+			<p>系列添加</p>
+			<div id="add_series_name">
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="" id="add_series_name_value" />
+			</div>
+			<div id="add_series_desc">
+				<label>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述</label> <input
+					value="" id="add_series_msg_value" />
+			</div>
+			<div>
+				<button id="add_series_btn">添加</button>
+			</div>
+		</div>
+
+		<!-- 显示素材 -->
+		<div class="main_material">
+			<button class="add_material">添加素材</button>
+			<ul id="main_material" class="clearfix">
+			</ul>
+		</div>
+
+		<!-- 素材编辑 -->
+		<div id="edit_material">
+			<p>素材编辑</p>
+			<div>
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="素材一" id="edit_material_title" />
+			</div>
+			<div>
+				<label>副&nbsp;标&nbsp;题</label> <input value="副标题副标题"
+					id="edit_material_subtitle" />
+			</div>
+			<div id="edit_material_pic">
+				<fieldset style="padding: 10px">
+					<legend>选择要替换图片</legend>
+					<form id="edit_material_img_form" enctype="multipart/form-data"
+						method="post" lpformnum="1" target="iframe_display">
+						<input type="file" name="fileUpload" id="edit_material_img"
+							style="border: none !important"> <input type="submit"
+							id="edit_material_img_btn" value="上传"
+							style="border: none !important">
+					</form>
+					<label id="edit_material_img_msg"></label>
+				</fieldset>
+			</div>
+			<div>
+				<label>市&nbsp;场&nbsp;价</label> <input value="1￥"
+					id="edit_material_market_price" />
+			</div>
+			<div>
+				<label>销&nbsp;售&nbsp;价</label> <input value="2￥"
+					id="edit_material_selling_price" />
+			</div>
+			<textarea id="edit_material_desc" placeholder="请描述..."></textarea>
+			<div>
+				<button id="edit_material_save">保存</button>
+				<button id="edit_material_delete">删除</button>
+			</div>
+		</div>
+
+		<!-- 添加素材 -->
+		<div id="add_material">
+			<p>添加素材</p>
+			<div>
+				<label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称</label> <input
+					value="" id="add_material_title" />
+			</div>
+			<div>
+				<label>副&nbsp;标&nbsp;题</label> <input value=""
+					id="add_material_subtitle" />
+			</div>
+			<!-- 图片 -->
+			<div id="add_material_subtitle">
+				<iframe id="iframe_display" name="iframe_display"
+					style="display: none;"></iframe>
+				<fieldset style="padding: 10px">
+					<legend>图片上传</legend>
+					<form id="add_material_img_form" enctype="multipart/form-data"
+						method="post" lpformnum="1" target="iframe_display">
+						<input type="file" name="fileUpload" id="add_material_img"
+							style="border: none !important"> <input type="submit"
+							target="_blank" id="add_material_img_btn" value="上传"
+							style="border: none !important">
+					</form>
+					<label id="add_material_img_msg"></label>
+				</fieldset>
+			</div>
+			<div>
+				<label>市&nbsp;场&nbsp;价</label> <input value="1￥"
+					id="add_material_market_price" />
+			</div>
+			<div>
+				<label>销&nbsp;售&nbsp;价</label> <input value="2￥"
+					id="add_material_selling_price" />
+			</div>
+			<textarea id="add_material_desc" placeholder="请描述..."></textarea>
+			<div>
+				<button id="add_material_save">添加</button>
+			</div>
+		</div>
+
+		<!-- 显示素材内容 -->
+		<div id="show_material">
+			<div id="show_material_title"></div>
+			<div id="show_material_subtitle"></div>
+			<div class="show_img">
+				<img id="show_material_img">
+			</div>
+			<div class="show_material_price clearfix">
+				<p>
+					<label>市&nbsp;场&nbsp;价</label><span id="show_material_marketprice"></span>
+				</p>
+				<p>
+					<label>销&nbsp;售&nbsp;价</label><span id="show_material_sellingprice"></span>
+				</p>
+			</div>
+			<div class="show_text">
+				<div id="show_material_text"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="Shortcut Icon" href="img/ic_icon.png">
+<title>材料</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/index.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/inner.js"></script>
+</head>
+
+<body>
+	<div id="main" style="background: #fefefe">
+		<!-- top -->
+		<div id="main_Top">
+			<p id="title">标题</p>
+			<img src="img/ic_back.png" onClick="window.history.go(-1)" />
+		</div>
+		<!-- 主体 -->
+		<div id="show_material_subtitle"></div>
+		<div class="show_img">
+			<img id="show_material_img">
+		</div>
+		<div class="show_material_price clearfix">
+			<p>
+				<label>市&nbsp;场&nbsp;价</label><span id="show_material_marketprice"></span>
+			</p>
+			<p>
+				<label>销&nbsp;售&nbsp;价</label><span id="show_material_sellingprice"></span>
+			</p>
+		</div>
+		<div class="show_text">
+			<div id="show_material_text"></div>
+		</div>
+	</div>
+</body>
+
+</html>
